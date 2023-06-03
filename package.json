@@ -13,10 +13,13 @@
   },
   "dependencies": {
     "@nanostores/react": "^0.7.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "nanostores": "^0.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.18"
+    "storybook": "^7.0.18",
+    "vitest": "^0.31.4"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",
