@@ -1,0 +1,27 @@
+.Button {
+    width: 100%;
+    height: 100%;
+}
+
+.buttonCircular {
+    font-family: 'MonsterratAlternatesExtraLight';
+    font-size: 1.2rem;
+    border-radius: 100px;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+.buttonNormal {
+    font-family: 'MonsterratAlternatesExtraLight';
+    font-size: 1.2rem;
+    border-radius: 0px;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Button:hover {
+    filter: brightness(1.2);
+}
+.Button:active {
+    filter: invert(1);
+}
