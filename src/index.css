@@ -1,4 +1,8 @@
 @font-face{
     font-family: 'MontserratAlternatesExtraLight';
-    src: url('/src/fonts/MontserratAlternates-ExtraLight.ttf')
+    src: url('/src/fonts/MontserratAlternates-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'BungeeShade';
+    src: url('/src/fonts/BungeeShade-Regular.ttf');
 }

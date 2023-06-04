@@ -4,8 +4,8 @@
 }
 
 .buttonCircular {
-    font-family: 'MonsterratAlternatesExtraLight';
-    font-size: 2rem;
+    font-family: 'BungeeShade';
+    font-size: 3rem;
     border-radius: 10px;
     border: none;
     font-weight: 400;
@@ -14,8 +14,8 @@
     height: 100%;
 }
 .buttonNormal {
-    font-family: 'MonsterratAlternatesExtraLight';
-    font-size: 2rem;
+    font-family: 'BungeeShade';
+    font-size: 3rem;
     border-radius: 0px;
     border: none;
     font-weight: 400;
