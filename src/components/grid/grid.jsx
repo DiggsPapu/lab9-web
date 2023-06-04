@@ -54,11 +54,17 @@ export default function grid() {
   function operate() {
     const newVal = math.evaluate(values.stringOp)
     if (newVal > 999999999 || newVal < 0) {
-      console.log('Estro a 2')
       setValues({
         result: 0,
         showingValue: 'ERROR',
         stringOp: '',
+        operated: true,
+      })
+    } else if (newVal.toString().length >= 9) {
+      setValues({
+        result: values.result,
+        showingValue: newVal.toString().slice(0, 9),
+        stringOp: newVal.toString(),
         operated: true,
       })
     } else {
