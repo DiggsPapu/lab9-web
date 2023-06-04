@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styles from './button.module.css'
 
 export default function button({
-  text, fontColor, backgroundColor, upperCase, bordered, circular, click,
+  text, fontColor, backgroundColor, upperCase, bordered, circular, click, id,
 }) {
   return (
     <div
       className={styles.Button}
       style={{ fontColor }}
     >
-      <button type="button" onClick={click} className={circular ? styles.buttonCircular : styles.buttonNormal} style={bordered ? { backgroundColor, color: fontColor, border: '1px solid black' } : { color: fontColor, backgroundColor }}>{upperCase === true ? text.toUpperCase() : text}</button>
+      <button type="button" data-testid={id} onClick={click} className={circular ? styles.buttonCircular : styles.buttonNormal} style={bordered ? { backgroundColor, color: fontColor, border: '1px solid black' } : { color: fontColor, backgroundColor }}>{upperCase === true ? text.toUpperCase() : text}</button>
     </div>
   )
 }
@@ -22,4 +22,5 @@ button.propTypes = {
   bordered: PropTypes.bool,
   circular: PropTypes.bool,
   click: PropTypes.func,
+  id: PropTypes.string,
 }

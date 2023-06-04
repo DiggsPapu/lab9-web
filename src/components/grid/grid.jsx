@@ -21,6 +21,13 @@ export default function grid() {
         result: values.result,
         showingValue: val,
         stringOp: val,
+        operated: false,
+      })
+    } else if (values.showingValue.length >= 9) {
+      setValues({
+        result: values.result,
+        showingValue: values.showingValue.slice(0, 9),
+        stringOp: values.stringOp,
       })
     } else {
       setValues({
@@ -45,12 +52,23 @@ export default function grid() {
     })
   }
   function operate() {
-    setValues({
-      result: math.evaluate(values.stringOp),
-      showingValue: math.evaluate(values.stringOp).toString(),
-      stringOp: math.evaluate(values.stringOp).toString(),
-      operated: true,
-    })
+    const newVal = math.evaluate(values.stringOp)
+    if (newVal > 999999999 || newVal < 0) {
+      console.log('Estro a 2')
+      setValues({
+        result: 0,
+        showingValue: 'ERROR',
+        stringOp: '',
+        operated: true,
+      })
+    } else {
+      setValues({
+        result: newVal,
+        showingValue: newVal.toString(),
+        stringOp: newVal.toString(),
+        operated: true,
+      })
+    }
   }
   const handleClick = (val) => {
     if (val === '+' || val === '-' || val === '*' || val === '/') {
@@ -77,6 +95,7 @@ export default function grid() {
                   bordered
                   circular
                   click={() => { handleClick(value) }}
+                  id={value.toString()}
                 />
               ))
           }

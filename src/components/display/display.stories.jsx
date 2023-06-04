@@ -12,3 +12,8 @@ export const ColorAndText = {
     fontColor: 'red',
   },
 }
+export const Error999 = {
+  args: {
+    value: '99999999999999999',
+  },
+}
